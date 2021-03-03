@@ -17,7 +17,7 @@ def term_text(data, object_d):
 def create_data_users():
     response = requests.get("https://raw.githubusercontent.com/"
                             "stepik-a-w/drf-project-boxes/"
-                            "master/recipients.json").json()
+                            "master/recipients.json", verify=False).json()
     for item in response:
         data_users = User.objects.get_or_create(
             id=item['id'],
@@ -37,7 +37,7 @@ def create_data_users():
 
 def create_data_items():
     response = requests.get('https://stepik.org/media/'
-                            'attachments/course/73594/foodboxes.json').json()
+                            'attachments/course/73594/foodboxes.json', verify=False).json()
     for item in response:
         data_items = Item.objects.get_or_create(
             id=item['id'],
@@ -54,7 +54,7 @@ def create_data_items():
 
 def create_data_reviews():
     response = requests.get('https://raw.githubusercontent.com/stepik-a-w'
-                            '/drf-project-boxes/master/reviews.json').json()
+                            '/drf-project-boxes/master/reviews.json', verify=False).json()
     for item in response:
         reviews_data = Review.objects.get_or_create(
             id=item['id'],
