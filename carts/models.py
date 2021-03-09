@@ -19,12 +19,3 @@ class CartItem(models.Model):
 
     def __str__(self):
         return self.item.title
-
-# class CartItem(models.Model):
-#     item = models.ForeignKey(Item, on_delete=models.CASCADE)
-#     quantity = models.PositiveIntegerField()
-#     price = models.DecimalField(decimal_places=2, max_digits=6)
-#
-#     def __str__(self):
-#         return self.item.title
-#

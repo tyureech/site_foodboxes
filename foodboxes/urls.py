@@ -34,7 +34,7 @@ urlpatterns = [
     path('items/', include('items.urls')),
     path('auth/', include('rest_framework.urls')),
     path('auth/login/', obtain_auth_token),
+    # path('user/', include('users.urls')),
     path('docs/', schema_view.with_ui('swagger', cache_timeout=0)),
     path('carts/', include('carts.urls')),
-    # path('review/', include('reviews.urls')),
 ]

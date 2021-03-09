@@ -4,10 +4,12 @@ chardet==4.0.0
 coreapi==2.3.3
 coreschema==0.0.4
 Django==3.1.6
+django-filter==2.4.0
 django-rest-framework==0.1.0
 djangorestframework==3.12.2
 drf-yasg==1.20.0
 flake8==3.8.4
+future==0.18.2
 idna==2.10
 importlib-metadata==3.7.0
 inflection==0.5.1
@@ -25,6 +27,7 @@ pytz==2021.1
 requests==2.25.1
 ruamel.yaml==0.16.13
 ruamel.yaml.clib==0.2.2
+serializers==0.2.4
 sqlparse==0.4.1
 termcolor==1.1.0
 typing-extensions==3.7.4.3

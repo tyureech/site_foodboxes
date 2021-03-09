@@ -1,5 +1,6 @@
-from rest_framework.pagination import PageNumberPagination
+from rest_framework.pagination import LimitOffsetPagination
 
 
-class CartItemsPagination(PageNumberPagination):
-    page_size = 3
+class CartItemsPagination(LimitOffsetPagination):
+    offset_query_param = 1
+    limit_query_param = 3
