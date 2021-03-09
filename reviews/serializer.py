@@ -18,6 +18,7 @@ class UserSerializer(serializers.ModelSerializer):
             "address",
         ]
 
+
 class ReviewSerializ(serializers.ModelSerializer):
     author = UserSerializer()
 

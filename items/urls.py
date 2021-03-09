@@ -4,7 +4,7 @@ from .views import Based
 from django.urls import path, include
 
 router = DefaultRouter()
-router.register('based', Based, basename='based')
+router.register('', Based, basename='based')
 urlpatterns = router.urls
 
 # urlpatterns = [

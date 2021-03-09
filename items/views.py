@@ -1,9 +1,11 @@
 from rest_framework.viewsets import ReadOnlyModelViewSet, ModelViewSet
-from items.models import Item
-from items.serializer import ItemSerializ
+from .models import Item
+from .serializer import ItemSerializ
+from .paginator import ItemsPagination
 
 
-class Based(ModelViewSet):
+class Based(ReadOnlyModelViewSet):
 
     queryset = Item.objects.all()
     serializer_class = ItemSerializ
+    pagination_class = ItemsPagination
